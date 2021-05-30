@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 
-import { Affix, Button, Space } from 'antd'
+import { 
+  Affix, 
+  Button, 
+  Space 
+} from 'antd'
+
+import {
+  Link
+} from "react-router-dom";
 
 const Navbar = () => {
   const top = 10;
@@ -22,12 +30,16 @@ const Navbar = () => {
       </style>
       <Affix offsetTop={top} className="navbar-center">
         <Space align="center">
-          <Button type="primary">
-            home
-          </Button>
-          <Button type="primary">
-            projects
-          </Button>
+          <Link to="/">
+            <Button type="primary">
+              home
+            </Button>
+          </Link>
+          <Link to="/projects">
+            <Button type="primary">
+              projects
+            </Button>
+          </Link>
           <Button type="primary">
             resume
           </Button>
